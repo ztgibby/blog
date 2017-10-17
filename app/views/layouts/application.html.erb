@@ -13,14 +13,14 @@
 			<li>
 			<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 			</li>
-      <%= current_user.name %>
+      <p1 style="font-weight: 900;">Current User:</p1> <%= current_user.name %>
 		<% else %>
 			<li>
 			<%= link_to('Login', new_user_session_path)  %>
 			</li>
 		<% end %>
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
+		<p id="notice"><%= notice %></p>
+		<p id="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

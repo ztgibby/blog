@@ -1,0 +1,29 @@
+<h1>Users</h1>
+<p><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th class="green">Name</th>
+      <th class="green">Email</th>
+      <th class="green">Admin</th>
+      <th class="green">Sign-in Count</th>
+      <th class="green">Post Count</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%- @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.admin %></td>
+        <td><%= user.sign_in_count %></td>
+        <td><%= user.posts.count %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
